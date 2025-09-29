@@ -13,12 +13,15 @@ class Config:
         self.api_key = os.getenv("AZURE_OPENAI_API_KEY", "").strip()
         self.api_version = os.getenv("AZURE_OPENAI_API_VERSION", "").strip()
         self.endpoint = os.getenv("AZURE_OPENAI_ENDPOINT", "").strip().rstrip("/")
-        # Role specific models / deployment names
-        self.model_writer = os.getenv("AZURE_OPENAI_MODEL_WRITER", "gpt-5-2").strip()
-        self.model_editor = os.getenv("AZURE_OPENAI_MODEL_EDITOR", "o3").strip()
-        self.model_critic = os.getenv("AZURE_OPENAI_MODEL_CRITIC", "o3").strip()
-        self.model_t2i = os.getenv("AZURE_OPENAI_MODEL_T2I", "gpt-image-1").strip()
-        self.default_model = os.getenv("AZURE_OPENAI_MODEL_DEFAULT", self.model_writer).strip()
+        
+        # Default model - this is the primary fallback
+        self.default_model = os.getenv("AZURE_OPENAI_MODEL_DEFAULT", "gpt-4").strip()
+        
+        # Role specific models with fallback to default_model
+        self.model_writer = os.getenv("AZURE_OPENAI_MODEL_WRITER", self.default_model).strip()
+        self.model_editor = os.getenv("AZURE_OPENAI_MODEL_EDITOR", self.default_model).strip()
+        self.model_critic = os.getenv("AZURE_OPENAI_MODEL_CRITIC", self.default_model).strip()
+        self.model_t2i = os.getenv("AZURE_OPENAI_MODEL_T2I", self.default_model).strip()
 
     def validate(self):
         missing = [k for k, v in {

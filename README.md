@@ -193,11 +193,13 @@ The application uses a sophisticated configuration system (`config.py`) that sup
 | `AZURE_OPENAI_API_KEY` | Your Azure OpenAI API key | Yes | - |
 | `AZURE_OPENAI_API_VERSION` | API version (e.g., "2024-10-01-preview") | Yes | - |
 | `AZURE_OPENAI_ENDPOINT` | Azure OpenAI resource endpoint | Yes | - |
-| `AZURE_OPENAI_MODEL_WRITER` | Model for Writer agent | No | gpt-5-2 |
-| `AZURE_OPENAI_MODEL_EDITOR` | Model for Editor agent | No | o3 |
-| `AZURE_OPENAI_MODEL_CRITIC` | Model for Critic and reviewers | No | o3 |
-| `AZURE_OPENAI_MODEL_T2I` | Model for image generation | No | gpt-image-1 |
-| `AZURE_OPENAI_MODEL_DEFAULT` | Fallback model | No | gpt-5-2 |
+| `AZURE_OPENAI_MODEL_DEFAULT` | Fallback model for all roles | No | gpt-4 |
+| `AZURE_OPENAI_MODEL_WRITER` | Model for Writer agent | No | Falls back to DEFAULT |
+| `AZURE_OPENAI_MODEL_EDITOR` | Model for Editor agent | No | Falls back to DEFAULT |
+| `AZURE_OPENAI_MODEL_CRITIC` | Model for Critic and reviewers | No | Falls back to DEFAULT |
+| `AZURE_OPENAI_MODEL_T2I` | Model for image generation | No | Falls back to DEFAULT |
+
+**Note**: If any role-specific model is not defined, the system will use `AZURE_OPENAI_MODEL_DEFAULT`. If `AZURE_OPENAI_MODEL_DEFAULT` is also not defined, it defaults to `gpt-4`.
 
 ### Role-Based Model Mapping
 
