@@ -459,7 +459,7 @@ For issues and questions:
 ## 📚 Resources
 
 - **Medium Article**: [Multi-Agent Blogpost Generator: AG2 + Azure OpenAI](https://medium.com/@tkadeethum/multi-agent-blogpost-generator-ag2-azure-openai-5ea8054eae3a) - Comprehensive guide explaining the architecture, implementation details, and real-world applications
-- **AutoGen Documentation**: [Microsoft AutoGen](https://microsoft.github.io/autogen/)
+- **AG2 (AutoGen) Documentation**: [AG2 GitHub Repository](https://github.com/ag2ai/ag2)
 - **Azure OpenAI Service**: [Azure OpenAI Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/)
 
 ## 🚀 Future Enhancements
