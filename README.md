@@ -2,6 +2,8 @@
 
 An advanced AI-powered application that uses AutoGen (AG2) and Azure OpenAI to create high-quality blog posts through multi-agent collaboration. This Streamlit-based tool orchestrates multiple specialized AI agents to generate, review, and refine content with built-in SEO optimization, ethical considerations, and visual content generation.
 
+📖 **Read the full article**: [Multi-Agent Blogpost Generator: AG2 + Azure OpenAI](https://medium.com/@tkadeethum/multi-agent-blogpost-generator-ag2-azure-openai-5ea8054eae3a) - A detailed walkthrough of the architecture and implementation.
+
 ## 🌟 Features
 
 - **Multi-Agent Architecture**: Leverages 9+ specialized agents working collaboratively
@@ -453,6 +455,12 @@ For issues and questions:
 - Review conversation logs for agent errors
 - Enable debug mode for detailed feedback
 - Submit issues on GitHub
+
+## 📚 Resources
+
+- **Medium Article**: [Multi-Agent Blogpost Generator: AG2 + Azure OpenAI](https://medium.com/@tkadeethum/multi-agent-blogpost-generator-ag2-azure-openai-5ea8054eae3a) - Comprehensive guide explaining the architecture, implementation details, and real-world applications
+- **AutoGen Documentation**: [Microsoft AutoGen](https://microsoft.github.io/autogen/)
+- **Azure OpenAI Service**: [Azure OpenAI Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/)
 
 ## 🚀 Future Enhancements
 
