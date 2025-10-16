@@ -16,7 +16,7 @@ An advanced AI-powered application that uses AutoGen (AG2) and Azure OpenAI to c
 
 ## 🏗️ Architecture
 
-[View the diagram](images/diagram_teeratornk_blog_post.pdf)
+![Diagram](images/diagram_teeratornk_blog_post.png)
 
 ### Core Agents
 
